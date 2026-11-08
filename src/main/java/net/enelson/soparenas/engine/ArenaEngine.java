@@ -72,6 +72,10 @@ public final class ArenaEngine {
         } catch (Exception exception) {
             matches.remove(id);
             for (UUID playerId : match.snapshots().keySet()) matchesByPlayer.remove(playerId);
+            try { mode.finish(match, MatchFinishReason.ERROR); }
+            catch (Exception finishException) {
+                plugin.getLogger().severe("Game mode cleanup failed for " + id + ": " + finishException.getMessage());
+            }
             restorePlayers(match);
             worlds.delete(world);
             throw new IllegalStateException("Could not start match " + id, exception);
