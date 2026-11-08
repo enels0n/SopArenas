@@ -1,0 +1,6 @@
+temporary-world-prefix: soparena_
+temporary-world-environment: NORMAL
+temporary-world-type: FLAT
+temporary-world-generate-structures: false
+restore-player-state: true
+finish-match-when-empty: true

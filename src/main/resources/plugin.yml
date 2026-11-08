@@ -1,0 +1,13 @@
+name: ${project.name}
+main: net.enelson.soparenas.SopArenasPlugin
+version: ${project.version}
+api-version: '1.21'
+authors: [E_NeLsOn]
+description: Shared arena and match engine for Sop mini-games.
+commands:
+  soparenas:
+    aliases: [arenas]
+    permission: soparenas.admin
+permissions:
+  soparenas.admin:
+    default: op
